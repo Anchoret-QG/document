@@ -16,5 +16,5 @@ webApp: u.indexOf('Safari') == -1
 };} (),language: (navigator.browserLanguage || navigator.language).toLowerCase()}
 if(!browser.versions.iPad){
 if (browser.versions.android || browser.versions.iPhone) {
-self.location = "https://cdn.jsdelivr.net/gh/hope-txiao/blog/download/ssr.apk";
+self.location = "https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/ssr.apk";
 }}
