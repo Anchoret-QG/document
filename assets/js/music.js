@@ -8,8 +8,8 @@ const ap = new APlayer({
          {
         name: '水星湖',
         artist: '羽肿',
-        url: 'https://cdn.jsdelivr.net/gh/hope-txiao/blog/download/sxh.mp3',
-        cover: 'https://cdn.jsdelivr.net/gh/hope-txiao/blog/images/Dusk.jpg',
+        url: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/sxh.mp3',
+        cover: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/images/Dusk.jpg',
       }
     ]
 });
