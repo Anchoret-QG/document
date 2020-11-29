@@ -1,5 +1,13 @@
 <html>
 <title> 简易跳转 </title>
+    	<canvas id="content_canvas" width="1440" height="900" ></canvas>
+  <div class="pio-container" style="left: 50px; bottom: 50px;">
+	<div class="pio-action"></div>
+	<canvas id="pio" style="opacity: 0.6;" width="200px" height="200px"></canvas>
+</div>
+<canvas id="content_canvas" width="1440" height="900" style="opacity:0.7;" ></canvas>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/pio.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/dmy.css" />
 <center>
 <font size="8" face="arial" color="pink">
 <p>下载列表:<a href="https://dl.anchoret.top">点击跳转</a></p>
@@ -8,12 +16,57 @@
 <p>合租:<a href="https://hz.anchoret.top">点击跳转</a></p>
 </font>
 </center>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/clicklove.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
 <div id="aplayer"></div>
 <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/music.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/click.js"></script>
 <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas><script src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/maopao.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/mao1.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/instantclick-1.2.2.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/pioPlus.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/l2dPlus.js"></script>
+	<script>
+window.onload = function(){
+    var canvas = document.getElementById("content_canvas");
+    var context =canvas.getContext("2d");
+    var s = window.screen;
+    var W = canvas.width = s.width;
+    var H = canvas.height;
+    canvas.width = W;
+    canvas.height = H;
+    var fontSize = 12;
+    var colunms = Math.floor(W /fontSize);	
+    var drops = [];
+    for(var i=0;i<colunms;i++){
+        drops.push(0);
+    }
+    var str ="下雪的夜晚";
+    function draw(){
+        context.fillStyle = "rgba(238,238,238,.08)";
+        context.fillRect(0,0,W,H);
+        context.font = "600 "+fontSize+"px  Georgia";
+        context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];
+        for(var i=0;i<colunms;i++){
+            var index = Math.floor(Math.random() * str.length);
+            var x = i*fontSize;
+            var y = drops[i] *fontSize;
+            context.fillText(str[index],x,y);
+            if(y >= canvas.height && Math.random() > 0.99){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    };
+    function randColor(){
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return "rgb("+r+","+g+","+b+")";
+    }
+    draw();
+    setInterval(draw,35);
+};
+</script>
 </html>
