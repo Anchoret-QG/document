@@ -6,9 +6,9 @@ const ap = new APlayer({
     fixed: true,
     audio: [
          {
-        name: '水星湖',
+        name: 'City',
         artist: '羽肿',
-        url: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/sxh.mp3',
+        url: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/city.flac',
         cover: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/images/Dusk.jpg',
       }
     ]
