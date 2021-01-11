@@ -2,7 +2,7 @@ var a_idx = 0;
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
         var a = new Array
-        ("欢迎来到五里的Blog","我进步很慢,但我从不后退","今天的随意计划胜过明天的完美计划","技术成就未来,梦想改变一切","今天的付出终有回报");
+        ("人類熱愛光明，卻用盡了黑暗的手段","求问贤者，若是一切如梦，人能何时醒来","点亮灰烬之息，浴火重生","念念不忘，必有回响","明月装饰了你的窗子，你装饰了别人的梦");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX,
