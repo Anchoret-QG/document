@@ -8,7 +8,7 @@ const ap = new APlayer({
          {
         name: 'City',
         artist: '羽肿',
-        url: 'https://dl.anchoret.top/download/city.flac',
+        url: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/cityc.mp3',
         cover: 'https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/images/Dusk.jpg',
       }
     ]
