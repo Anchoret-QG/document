@@ -1,6 +1,6 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
-    autoplay: true,
+    autoplay: false,
     theme: '#FADFA3',
     volume: 0.9,
     fixed: true,
