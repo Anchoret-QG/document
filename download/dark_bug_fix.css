@@ -1,0 +1,10 @@
+/* 修复暗黑模式遮盖问题 */
+[data-theme='dark'] #web_bg:before,
+[data-theme='dark'] #footer:before,
+[data-theme='dark'] #page-header:before {
+   position: absolute;
+   width: 0% !important; 
+   height: 0% !important; 
+   background-color: rgba(0,0,0,0.7); 
+   content: ''; 
+}
