@@ -1,4 +1,4 @@
-/* 修复暗黑模式遮盖问题 */
+/* 修复Hexo-ButterFly暗黑模式遮盖问题 */
 [data-theme='dark'] #web_bg:before,
 [data-theme='dark'] #footer:before,
 [data-theme='dark'] #page-header:before {
